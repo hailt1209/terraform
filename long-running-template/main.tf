@@ -17,7 +17,6 @@ resource "random_string" "long_running" {
 }
 
 variable "ping_time" {
-  default = "100000"
 }
 
 variable "docker_host" {
