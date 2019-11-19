@@ -10,14 +10,26 @@ provider "google" {
   region      = "${var.region}"
 }
 
-provider "azurerm" {
-	version = "=1.20.0"
-	subscription_id = "${var.subscription_id}"
-	client_id       = "${var.client_id}"
-	client_secret   = "${var.client_secret}"
-	tenant_id       = "${var.tenant_id}"
-}
-
 provider "docker" {
   host = "${var.docker_host}"
+}
+
+provider "vsphere" {
+  user           = "${var.vsphere_user}"
+  password       = "${var.vsphere_password}"
+  vsphere_server = "${var.vsphere_server}"
+  
+  # If you have a self-signed cert
+  allow_unverified_ssl = true
+}
+
+provider "cda" {
+  cda_server     = "${var.cda_server}"
+  user           = "${var.cda_user}"
+  password       = "${var.cda_password}"  
+  
+  default_attributes = {
+    folder = "DEFAULT"
+   // owner  = "${var.cda_user}"
+  }
 }
