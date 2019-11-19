@@ -1,3 +1,4 @@
-variable "cda_server" {default = "http://FQQH1Z2/CDA"}
-variable "cda_user" {default = "100/AUTOMIC/AUTOMIC"}
+variable "cda_server" {default = "http://vvndev04:81/CDA_PSQL"}
+variable "cda_user" {default = "200/AUTOMIC/AUTOMIC"}
 variable "cda_password" {default = ""}
+variable "owner" {default = "200/AUTOMIC/AUTOMIC"}
