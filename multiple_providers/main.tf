@@ -15,6 +15,12 @@ provider "vsphere" {
   allow_unverified_ssl = true
 }
 
+resource "random_string" "random_name" {
+	length  = 5
+	special = false
+	lower   = false
+}
+
 
 #**********************************************************************
 #                        AWS provider
