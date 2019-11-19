@@ -22,3 +22,9 @@ provider "vsphere" {
   # If you have a self-signed cert
   allow_unverified_ssl = true
 }
+
+resource "aws_instance" "demo_instance" {
+  ami                    = "${var.aws_ami}"
+  instance_type          = "${var.instance_type}"
+  vpc_security_group_ids = ["${var.aws_security_group_id}"]  
+}

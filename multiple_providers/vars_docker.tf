@@ -1,3 +1,3 @@
 variable "host" {
-	default = "http://10.243.41.201:4243"
+	default = "http://vvnbuild02.sbb01.spoc.global:4243"
 }
