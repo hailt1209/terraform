@@ -22,14 +22,3 @@ provider "vsphere" {
   # If you have a self-signed cert
   allow_unverified_ssl = true
 }
-
-provider "cda" {
-  cda_server     = "${var.cda_server}"
-  user           = "${var.cda_user}"
-  password       = "${var.cda_password}"  
-  
-  default_attributes = {
-    folder = "DEFAULT"
-   // owner  = "${var.cda_user}"
-  }
-}
